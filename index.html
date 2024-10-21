@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- POPUP SOLICITANDO NOME -->
+  <div id="popup-nome" class="popup-nome">
+    <div class="fundo">
+      <h1>Digite seu nome</h1>
+      <form name="nome-usuario">
+        <input required="true" name="nome" id="nome-usuario" type="text" placeholder="Digite seu nome...">
+        <button onclick="definirNome(event)">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ICONE DE CARREGAMENTO -->
+  <div>
+    <div id="carregamento-inicial">
+      <img src="./images/logo.svg">
+
+    </div>
+  </div>
+
+
+  <header>
+    <div class="icones">
+      <i left class="bi bi-card-image"></i>
+      <i right class="bi bi-person"></i>
+      <i right class="bi bi-info-circle"></i>
+      <i id="esconder-saldo" right class="bi bi-eye-slash"></i>
+
+
+    </div>
+
+    <p class="ola-usuario">Olá, <span id="nomeDeUsuario" class="dadosCarregando"></span></p>
+  </header>
+
+  <main>
+    <div class="topo">
+
+      <span conta bold>
+        Conta <i icone class="bi bi-chevron-right"></i>
+      </span>
+
+
+      <span class="dadosCarregando" id="saldo-debito" saldo bold>
+        <!--
+               
+                SALDO DÉBITO 
+                
+               -->
+      </span>
+      <span esconder>••••</span>
+
+    </div>
+
+
+
+    <div class="atalhos">
+
+      <div class="cards">
+        <i icone class="bi bi-x-diamond-fill" id="dom-add"></i>
+        <span>Área pix</span>
+      </div>
+
+      <div class="cards">
+        <i icone class="bi bi-upc-scan"></i>
+        <span>Pagar</span>
+      </div>
+
+      <div class="cards">
+        <i icone class="bi bi-bank"></i>
+        <span>Pegar emprestado</span>
+      </div>
+
+      <div class="cards">
+        <i icone class="bi bi-cash-stack"></i>
+        <span>Transferir</span>
+      </div>
+
+      <div class="cards">
+        <i icone class="bi bi-piggy-bank"></i>
+        <span>Caixinhas</span>
+      </div>
+
+      <div class="cards">
+        <i icone class="bi bi-phone"></i>
+        <span>Recargas de celular</span>
+      </div>
+
+
+      <div class="cards">
+        <i icone class="bi bi-send"></i>
+        <span>Cobrar</span>
+      </div>
+
+      <div class="cards">
+        <i icone class="bi bi-graph-up-arrow"></i>
+        <span>Investir</span>
+      </div>
+
+    </div>
+    <div class="meus-cartoes">
+      <p> <i class="bi bi-credit-card-2-front"></i> Meus cartões</p>
+    </div>
+
+
+    <div class="ofertas">
+      <i class="bi bi-x-diamond-fill"></i>
+
+      <p><b>Pix no credito:</b> sem usar o saldo da conta.</p>
+    </div>
+
+
+
+    <div class="cartao-credito conteiner-border">
+
+      <div class="titulo" bold>
+        Cartão de credito <i icone class="bi bi-chevron-right"></i>
+      </div>
+
+      <span>Saldo positivo</span>
+
+      <span id="saldo-credito" bold saldo class="dadosCarregando">
+        <!-- 
+          
+          SALDO DE CREDITO 
+          
+          -->
+      </span>
+      <span esconder>••••</span>
+
+
+
+      <div class="detalhes">
+        <span>Limite disponivel de
+          <b saldo>R$ 53,90</b>
+          <span esconder>••••</span>
+
+        </span>
+        <span>Debito automatico <mark>ativado</mark></span>
+      </div>
+
+     </div>
+
+
+    <div class="emprestimo conteiner-border">
+
+      <div class="titulo" bold>
+        Emprestimo <i icone class="bi bi-chevron-right"></i>
+      </div>
+
+      <span>Valor disponivel de até</span>
+
+      <span id="saldo-emprestimo" class="saldo" saldo bold class="dadosCarregando">
+        R$ 12.000,00
+        <!--
+           
+            SALDO PARA EMPRESTIMO 
+            
+            -->
+      </span>
+      <span esconder>••••</span>
+
+    </div>
+
+
+    <!--    <div class="descubra-mais">
+                
+                <p title bold>Descubra mais</p>             
+                
+         <div class="cards">  
+                                                                    
+           <div class="card first">
+               
+               <span title>Seguro de vida</span>
+               <span>Cuide de quem você mais ama!</span>
+               <button></button>
+           </div>   
+           
+           <div class="card">
+               
+           </div>
+           
+           <div class="card">
+               
+           </div>
+           
+         </div>
+                
+      </div>
+        
+       -->
+
+  </main>
+
+  <div id="nav-inferior" class="opcoes-inferior">
+
+    <i right class="bi bi-arrow-down-up"></i>
+    <i right class="bi bi-currency-dollar"></i>
+    <i right class="bi bi-handbag"></i>
+
+
+  </div>
+
+
+
+  <fim fim></fim>
+  <script src="./script.js"></script>
+</body>
+
+</html>

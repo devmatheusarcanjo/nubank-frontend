@@ -1,0 +1,528 @@
+/* ICONES BOOTSTRAP */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Nunito|lato");
+
+/* #6E14CB  */
+
+:root {
+  --roxo: rgb(130, 10, 209);
+  --roxo-hover: #9637d4;
+  --preto-claro: #333;
+  --preto-claro-hover: #555;
+  --preto: #111;
+}
+
+/* POPUP PARA OBTER O NOME */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--preto);
+  color: #eee;
+  font-family: sans-serif, arial;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  height: 100vh;
+}
+
+
+.popup-nome {
+  background-color: rgb(0, 0, 0, .8);
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  padding: 20%;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 50px black
+}
+
+.popup-nome .fundo {
+  background-color: white;
+  padding: 10vw;
+  border-radius: 15px;
+  min-width: 90vw;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 20px var(--roxo)
+}
+
+.popup-nome input {
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 0px;
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid black;
+  transition: all 0.5s;
+  margin: 10px;
+}
+
+.popup-nome input:focus {
+  border: 10% 3px solid black;
+}
+
+.popup-nome h1 {
+  color: var(--roxo);
+}
+
+.popup-nome form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.popup-nome button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--roxo);
+  color: white;
+  border-radius: 15px;
+  font-size: 1.5em;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.popup-nome button:hover {
+  background-color: var(--roxo-hover);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CARD PARA ADICIONAR VALOR */
+
+.card-add-value * {
+  margin: 0px;
+  padding: 0px;
+}
+
+.card-add-value {
+  box-sizing: border-box;
+  display: flex;
+  background-color: var(--roxo);
+  flex-direction: column;
+  border-radius: 15px;
+  bottom: 40vh;
+  width: 70%;
+  left: 15%;
+  ;
+
+  padding: 20px;
+  position: fixed;
+
+
+  justify-content: center;
+  align-items: center;
+}
+
+[input]:hover body {
+  bottom: 20px;
+  color: red;
+  background-color: red !important;
+
+
+}
+
+/* CARREGAMENTO INICIAL */
+
+#carregamento-inicial {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: white;
+  z-index: 2;
+}
+
+
+
+/* */
+
+img {
+  width: 30%;
+  color: white;
+}
+
+@keyframes exemplo {
+  0% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+
+  100% {
+    opacity: 0.2
+  }
+}
+
+img {
+  animation: exemplo 1s ease-in-out infinite;
+}
+
+
+
+
+
+[bold] {
+  font-weight: 600;
+}
+
+mark {
+  background-color: transparent;
+  color: green;
+}
+
+.el-preto-claro-hover {
+  background-color: var(--preto-claro-hover);
+  transform: scale(1.1);
+}
+
+/* Iniciar com os saldo visiveis */
+[esconder] {
+  display: none;
+  font-size: 2.5em;
+}
+
+
+
+
+header {
+  background-color: var(--roxo);
+  padding: 15px;
+}
+
+header .ola-usuario {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+header .icones {
+  font-size: 1.4em;
+  height: 2em;
+
+}
+
+header .icones i {
+  margin: 0 10px;
+
+}
+
+header .icones [right] {
+  float: right;
+}
+
+header .icones [left] {
+  float: left;
+  background-color: #6E14CB;
+  padding: 8px 10px;
+  border-radius: 50%;
+}
+
+main {
+  font-size: 1em;
+}
+
+/* Aplicar em todos span menos no que possui a tag esconder */
+main .topo span:not([esconder]) {
+  display: block;
+}
+
+main .topo {
+  display: block;
+  margin: 20px;
+
+}
+
+
+
+.dadosCarregando {
+  background-image: linear-gradient(to right, #333, #555);
+  width: calc(16px * 7);
+  /* Largura equivalente a altura de 7 letras */
+  display: inline-block;
+  border-radius: 10px;
+  height: 20px;
+}
+
+
+@keyframes carre {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 0%;
+  }
+
+  0% {
+    background-position: 0% 0%;
+  }
+}
+
+.dadosCarregando {
+  background: linear-gradient(to right, #333, #555, #777, #555, #333);
+  background-size: 500% 100%;
+  /* Mais largo para garantir que a transição de cores seja visível */
+  animation: carre 2s linear infinite;
+}
+
+
+
+main .topo #saldo-debito {
+  font-size: 1.5rem;
+}
+
+main i[icone] {
+  font-size: 0.7rem;
+}
+
+main .atalhos {
+  padding: 0px 10px;
+  overflow: auto;
+  word-spacing: 0px;
+  display: flex;
+}
+
+main .atalhos .cards {
+  text-align: center;
+  display: inline-block;
+  padding: 0 10px;
+  text-align: center;
+  margin: 5px;
+}
+
+main .atalhos .cards [icone] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5em;
+  background-color: var(--preto-claro);
+  border-radius: 50%;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+
+  transition: all .3s;
+
+}
+
+
+
+main .atalhos .cards [icone]:hover {
+  background-color: var(--preto-claro-hover);
+  transform: scale(1.05);
+}
+
+main .atalhos .cards span:not([esconder]) {
+  display: block;
+  margin-top: 20px;
+  white-space: normal;
+  text-align: center;
+}
+
+main .meus-cartoes {
+  margin: 20px;
+  background-color: var(--preto-claro);
+  padding: 20px;
+  border-radius: 10px;
+
+  transition: all .2s;
+}
+
+main .meus-cartoes:hover {
+  background-color: var(--preto-claro-hover);
+  transform: scale(1.03);
+}
+
+main .meus-cartoes i {
+  display: inline-block;
+  margin-right: 1rem;
+
+}
+
+
+/* CONTAINERS COM BORDAS SUPERIOR E INFERIOR */
+
+main .conteiner-border {
+  background-color: var(--preto);
+  border-style: solid none;
+  border-width: 2px;
+  border-color: var(--preto-claro);
+  padding: 20px;
+}
+
+main .conteiner-border span:not([esconder]) {
+  display: block;
+  margin: 8px 0;
+}
+
+main .conteiner-border .titulo {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+main .conteiner-border .saldo {
+  font-size: 1.2em;
+}
+
+main .detalhes {
+  margin-top: 20px;
+  color: #bbb;
+}
+
+/* CARTÃO DE OFERTAS */
+
+main .ofertas {
+  display: flex;
+  background-color: #640CA033;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+  align-items: center;
+  border-radius: 10px;
+  transition: all .5s;
+}
+
+main .ofertas:hover {
+  background-color: #640CA099;
+}
+
+main .ofertas i {
+  font-size: 3em;
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(to right, #333, #666);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+
+/* DESCUBRA MAIS */
+
+.descubra-mais>[title] {
+  margin: 20px;
+  font-size: 1.2em;
+}
+
+.descubra-mais .cards {
+
+  white-space: nowrap;
+  overflow: auto;
+  /*  padding: 0 20px; */
+}
+
+.descubra-mais .card {
+  display: inline-block;
+  background-color: #666;
+  width: 200px;
+  height: 300px;
+  margin: 20px;
+  white-space: normal;
+}
+
+.descubra-mais .card [title] {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.opcoes-inferior {
+  display: flex;
+  /* display none pois o javaScript ira calcular a largura e centralizar antes de exibir */
+
+  visibility: hidden;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  padding: 8px;
+  border-radius: 100pt;
+  bottom: 40px;
+
+}
+
+.opcoes-inferior i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 25px;
+  margin: -5px;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: black;
+  transition: background-color .5s;
+
+
+}
+
+.opcoes-inferior i:hover {
+  background-color: #640CA088;
+  z-index: 1;
+  color: #ffeaff;
+}
+
+
+[fim] {
+  margin-top: 500px;
+  display: block;
+}
